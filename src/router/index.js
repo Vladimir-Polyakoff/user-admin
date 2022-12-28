@@ -5,6 +5,7 @@ import DragbleWords from '@/views/DragbleWords'
 import Text from '@/views/Text'
 import Checkbox from '@/views/Checkbox'
 import Radio from '@/views/Radio'
+import FindSumIndex from '@/views/FindSumIndex'
 
 Vue.use(VueRouter)
 
@@ -34,6 +35,11 @@ const routes = [
     path: '/radio',
     name: 'Radio',
     component: Radio
+  },
+  {
+    path: '/find-index',
+    name: 'FindSumIndex',
+    component: FindSumIndex
   }
 ]
 

@@ -72,6 +72,13 @@ export default {
         name: 'Radio',
         title: 'Radio',
         icon: 'mdi-account'
+      },
+      {
+        id: 5,
+        path: '/find-index',
+        name: 'FindSumIndex',
+        title: 'RaFindSumIndexdio',
+        icon: 'mdi-account'
       }
     ]
   }),
