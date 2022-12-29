@@ -1,5 +1,6 @@
 <template>
   <div class="parent">
+  <div>GIT</div>
     <div class="chat">
       <div v-for="(sms, index) in chatList" :key="index" :style="sms.name === 'second' && 'text-align: right'">{{ sms.name }} : {{ sms.value }}</div>
     </div>
