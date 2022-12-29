@@ -75,6 +75,13 @@ export default {
       },
       {
         id: 5,
+        path: '/sms-chat',
+        name: 'SmsChat',
+        title: 'SmsChat',
+        icon: 'mdi-account'
+      },
+      {
+        id: 6,
         path: '/find-index',
         name: 'FindSumIndex',
         title: 'RaFindSumIndexdio',

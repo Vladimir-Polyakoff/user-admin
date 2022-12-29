@@ -6,6 +6,8 @@ import Text from '@/views/Text'
 import Checkbox from '@/views/Checkbox'
 import Radio from '@/views/Radio'
 import FindSumIndex from '@/views/FindSumIndex'
+import SmsChat from '@/views/SmsChat'
+import SmsChatSecond from '@/views/SmsChatSecond'
 
 Vue.use(VueRouter)
 
@@ -40,6 +42,16 @@ const routes = [
     path: '/find-index',
     name: 'FindSumIndex',
     component: FindSumIndex
+  },
+  {
+    path: '/sms-chat',
+    name: 'SmsChat',
+    component: SmsChat
+  },
+  {
+    path: '/sms-chat-second',
+    name: 'SmsChatSecond',
+    component: SmsChatSecond
   }
 ]
 
