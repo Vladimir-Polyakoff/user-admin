@@ -1,18 +1,3 @@
-<template>
-  <div class="dropdawn">
-    <div class="dropdawn__title"
-    @click.stop="showList = !showList"
-    >{{ selected.title }}</div>
-    <div class="dropdawn__list"
-    v-show="showList">
-      <div class="dropdawn__item" v-for="item in filteredList" :key="item.id"
-      @click="setFilter(item)">
-        {{ item.title }}
-      </div>
-    </div>
-  </div>
-</template>
-
 <script>
 
 export default {
@@ -68,6 +53,22 @@ export default {
   }
 }
 </script>
+
+<template>
+  <div class="dropdawn">
+    <div class="dropdawn__title" @click.stop="showList = !showList">{{ selected.title }}</div>
+    <div class="dropdawn__list" v-show="showList">
+      <div
+        class="dropdawn__item"
+        v-for="item in filteredList"
+        :key="item.id"
+        @click="setFilter(item)"
+      >
+        {{ item.title }}
+      </div>
+    </div>
+  </div>
+</template>
 
 <style scoped lang="scss">
   .dropdawn {

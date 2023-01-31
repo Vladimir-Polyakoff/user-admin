@@ -1,10 +1,3 @@
-<template>
-  <div>
-    <input type="text" v-model.trim="value">
-    <button :disabled="!value" @click="$emit('send', value), value = ''">send</button>
-  </div>
-</template>
-
 <script>
 export default {
   name: 'InputChat',
@@ -15,6 +8,13 @@ export default {
   }
 }
 </script>
+
+<template>
+  <div>
+    <input type="text" v-model.trim="value">
+    <button :disabled="!value" @click="$emit('send', value), value = ''">send</button>
+  </div>
+</template>
 
 <style scoped>
   div {

@@ -1,19 +1,18 @@
 <template>
   <div class="text-center">
-    <v-dialog
-      v-model="showDialog"
-      width="500"
-    >
+    <v-dialog v-model="showDialog" width="500">
       <v-card>
         <v-card-title class="text-h5 grey lighten-2">
           {{ formTitle }} User
         </v-card-title>
 
         <v-card-text>
-          <Form ref="Form" @close="showDialog = false"
-          @save="newUser => $emit('saveUser', newUser)"
-          @edit="editedUser => $emit('editUser', editedUser)"
-          :isOpenForm="showDialog"
+          <Form
+            ref="Form"
+            @close="showDialog = false"
+            @save="newUser => $emit('saveUser', newUser)"
+            @edit="editedUser => $emit('editUser', editedUser)"
+            :isOpenForm="showDialog"
           ></Form>
         </v-card-text>
 
@@ -24,10 +23,7 @@
         </v-card-actions>
       </v-card>
     </v-dialog>
-    <ToggleButton :buttonTitle="buttonTitle + ' форму'"
-      @toggleVisibleForm="toggleVisibleForm"
-      >
-    </ToggleButton>
+    <ToggleButton :buttonTitle="buttonTitle + ' форму'" @toggleVisibleForm="toggleVisibleForm"></ToggleButton>
   </div>
 </template>
 

@@ -1,33 +1,3 @@
-<template>
-  <div>
-    <div>
-      <div>
-        <input type="radio" id="contactChoice1"
-        name="contact"
-        @click="radio = 1">
-        <label for="contactChoice1">1</label>
-
-        <input type="radio" id="contactChoice2"
-        name="contact"
-        @click="radio = 6">
-        <label for="contactChoice2">6</label>
-
-        <input type="radio" id="contactChoice3"
-        name="contact"
-        @click="radio = 9">
-        <label for="contactChoice3">9</label>
-      </div>
-      <div>
-        <button
-        @click="submit"
-        >Submit</button>
-      </div>
-    </div>
-    <input type="number" v-model="to">
-    <div>From {{ from }}</div>
-  </div>
-</template>
-
 <script>
 export default {
   name: 'TheRadio',
@@ -49,6 +19,43 @@ export default {
   }
 }
 </script>
+
+<template>
+  <div>
+    <div>
+      <div>
+        <input
+          type="radio"
+          id="contactChoice1"
+          name="contact"
+          @click="radio = 1"
+        >
+        <label for="contactChoice1">1</label>
+
+        <input
+          type="radio"
+          id="contactChoice2"
+          name="contact"
+          @click="radio = 6"
+        >
+        <label for="contactChoice2">6</label>
+
+        <input
+          type="radio"
+          id="contactChoice3"
+          name="contact"
+          @click="radio = 9"
+        >
+        <label for="contactChoice3">9</label>
+      </div>
+      <div>
+        <button @click="submit">Submit</button>
+      </div>
+    </div>
+    <input type="number" v-model="to">
+    <div>From {{ from }}</div>
+  </div>
+</template>
 
 <style scoped>
   input {

@@ -1,11 +1,3 @@
-<template>
-  <div>
-    <!-- <input type="number" @blur="emitCount($event)"> -->
-    <input :type="type" v-model="number">
-    <button @click="$emit('setUserCount', number)">{{ buttonTitle }}</button>
-  </div>
-</template>
-
 <script>
 export default {
   name: 'InputCount',
@@ -36,6 +28,14 @@ export default {
   }
 }
 </script>
+
+<template>
+  <div>
+    <!-- <input type="number" @blur="emitCount($event)"> -->
+    <input :type="type" v-model="number">
+    <button @click="$emit('setUserCount', number)">{{ buttonTitle }}</button>
+  </div>
+</template>
 
 <style scoped>
   div {

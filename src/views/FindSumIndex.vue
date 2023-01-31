@@ -1,49 +1,3 @@
-<template>
-  <div>
-    <v-form
-      style="display:flex; gap: 20px"
-    >
-      <v-text-field
-      style="max-width:250px; height: 70px;"
-        v-model="nums"
-        :rules="numsRules"
-        @input="showResult = false"
-        label="Введите числа через запятую"
-        required
-      ></v-text-field>
-
-      <v-text-field
-        style="max-width:250px; height: 70px;"
-        v-model="sum"
-        :rules="sumRules"
-        @input="showResult = false"
-        label="Сумма"
-        required
-      ></v-text-field>
-
-      <div style="display:flex; flex-direction:column; gap:10px">
-        <v-btn
-          style="color:green;"
-          class="mr-4"
-          @click="findIndexSum(), showResult = true"
-          >
-          Посчитать
-        </v-btn>
-
-        <v-btn
-          style="color:red;"
-          @click="reset"
-        >
-          Сбросить
-        </v-btn>
-      </div>
-    </v-form>
-    <!-- <div class="result">{{ result }}</div> -->
-    <span class="result" v-show="showResult && result.length" v-for="(num, index) in nums.split(',').join('')" :key="index" :style="result.includes(index) && 'color:red; font-size:28px'">{{ num }}</span>
-    <div v-show="showResult && !result.length">Не найдена сумма</div>
-  </div>
-</template>
-
 <script>
 export default {
   name: 'FindSumIndex',
@@ -108,6 +62,60 @@ export default {
   }
 }
 </script>
+
+<template>
+  <div>
+    <v-form
+      style="display:flex; gap: 20px"
+    >
+      <v-text-field
+        style="max-width:250px; height: 70px;"
+        v-model="nums"
+        :rules="numsRules"
+        @input="showResult = false"
+        label="Введите числа через запятую"
+        required
+      ></v-text-field>
+
+      <v-text-field
+        style="max-width:250px; height: 70px;"
+        v-model="sum"
+        :rules="sumRules"
+        @input="showResult = false"
+        label="Сумма"
+        required
+      ></v-text-field>
+
+      <div style="display:flex; flex-direction:column; gap:10px">
+        <v-btn
+          style="color:green;"
+          class="mr-4"
+          @click="findIndexSum(), showResult = true"
+          >
+          Посчитать
+        </v-btn>
+
+        <v-btn
+          style="color:red;"
+          @click="reset"
+        >
+          Сбросить
+        </v-btn>
+      </div>
+    </v-form>
+    <!-- <div class="result">{{ result }}</div> -->
+    <span
+      class="result"
+      v-show="showResult && result.length"
+      v-for="(num, index) in nums.split(',').join('')"
+      :key="index"
+      :style="result.includes(index) && 'color:red; font-size:28px'"
+    >
+      {{ num }}
+    </span>
+    <div v-show="showResult && !result.length">Не найдена сумма</div>
+  </div>
+</template>
 
 <style scoped>
   .result {

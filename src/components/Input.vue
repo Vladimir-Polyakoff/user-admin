@@ -1,10 +1,3 @@
-<template>
-  <div>
-    <input type="text" v-model.trim="value">
-    <div class="error-input" v-if="error.length"> {{ error }}</div>
-  </div>
-</template>
-
 <script>
 export default {
   name: 'TheInput',
@@ -36,6 +29,13 @@ export default {
   }
 }
 </script>
+
+<template>
+  <div>
+    <input type="text" v-model.trim="value">
+    <div class="error-input" v-if="error.length"> {{ error }}</div>
+  </div>
+</template>
 
 <style scoped>
   input {

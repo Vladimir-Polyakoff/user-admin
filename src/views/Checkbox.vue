@@ -1,11 +1,3 @@
-<template>
-  <div>
-    <v-checkbox @change="change" v-model="checkbox">
-    </v-checkbox>
-    <ConfirmDialog @confirm="confirm" @cansel="showDialog = false" v-show="showDialog"></ConfirmDialog>
-  </div>
-</template>
-
 <script>
 import ConfirmDialog from '@/components/ConfirmDialog'
 
@@ -35,3 +27,15 @@ export default {
   }
 }
 </script>
+
+<template>
+  <div>
+    <v-checkbox @change="change" v-model="checkbox">
+    </v-checkbox>
+    <ConfirmDialog
+      @confirm="confirm"
+      @cansel="showDialog = false"
+      v-show="showDialog"
+    ></ConfirmDialog>
+  </div>
+</template>

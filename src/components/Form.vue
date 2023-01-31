@@ -1,59 +1,3 @@
-<template>
-  <v-form
-    ref="Form"
-    v-model="valid"
-    lazy-validation
-  >
-    <v-text-field
-      v-model="name"
-      :counter="10"
-      :rules="nameRules"
-      label="Name"
-      required
-    ></v-text-field>
-
-    <v-text-field
-      v-model="surename"
-      :rules="surenameRules"
-      label="Surename"
-      required
-    ></v-text-field>
-
-    <v-text-field
-      v-model="email"
-      :rules="emailRules"
-      label="Email"
-      required
-    ></v-text-field>
-
-    <div style="display: flex; justify-content: space-between;">
-      <v-btn style="color: white;"
-        :disabled="!valid"
-        :color="!isEditMode ? 'success' : 'blue'"
-        class="mr-4"
-        @click="validate"
-      >
-        {{ buttonTitle }}
-      </v-btn>
-      <div>
-        <v-btn
-          color="error"
-          class="mr-4"
-          @click="reset"
-        >
-          Сбросить
-        </v-btn>
-
-        <v-btn
-          @click="close"
-        >
-          Закрыть
-        </v-btn>
-      </div>
-    </div>
-  </v-form>
-</template>
-
 <script>
 export default {
   name: 'TheForm',
@@ -145,3 +89,60 @@ export default {
   }
 }
 </script>
+
+<template>
+  <v-form
+    ref="Form"
+    v-model="valid"
+    lazy-validation
+  >
+    <v-text-field
+      v-model="name"
+      :counter="10"
+      :rules="nameRules"
+      label="Name"
+      required
+    ></v-text-field>
+
+    <v-text-field
+      v-model="surename"
+      :rules="surenameRules"
+      label="Surename"
+      required
+    ></v-text-field>
+
+    <v-text-field
+      v-model="email"
+      :rules="emailRules"
+      label="Email"
+      required
+    ></v-text-field>
+
+    <div style="display: flex; justify-content: space-between;">
+      <v-btn
+        style="color: white;"
+        :disabled="!valid"
+        :color="!isEditMode ? 'success' : 'blue'"
+        class="mr-4"
+        @click="validate"
+      >
+        {{ buttonTitle }}
+      </v-btn>
+      <div>
+        <v-btn
+          color="error"
+          class="mr-4"
+          @click="reset"
+        >
+          Сбросить
+        </v-btn>
+
+        <v-btn
+          @click="close"
+        >
+          Закрыть
+        </v-btn>
+      </div>
+    </div>
+  </v-form>
+</template>

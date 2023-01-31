@@ -1,16 +1,3 @@
-<template>
-  <div>
-    <Dropdawn
-    :list="list"
-    ref="Dropdawn"
-    />
-    <Input
-    ref="Input"
-    />
-    <button @click="replace">Заменить</button>
-  </div>
-</template>
-
 <script>
 import Dropdawn from '@/components/Dropdawn'
 import Input from '@/components/Input'
@@ -42,6 +29,19 @@ export default {
   }
 }
 </script>
+
+<template>
+  <div>
+    <Dropdawn
+      :list="list"
+      ref="Dropdawn"
+    />
+    <Input
+      ref="Input"
+    />
+    <button @click="replace">Заменить</button>
+  </div>
+</template>
 
 <style scoped>
   button {

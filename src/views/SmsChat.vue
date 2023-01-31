@@ -1,11 +1,15 @@
 <template>
   <div class="parent">
     <div class="chat">
-      <div v-for="(sms, index) in chatList" :key="index" :style="sms.name === 'second' && 'text-align: right'">{{ sms.name }} : {{ sms.value }}</div>
+      <div
+        v-for="(sms, index) in chatList"
+        :key="index"
+        :style="sms.name === 'second' && 'text-align: right'"
+      >
+      {{ sms.name }} : {{ sms.value }}
+      </div>
     </div>
-    <InputChat
-    @send="send"
-    />
+    <InputChat @send="send"/>
   </div>
 </template>
 

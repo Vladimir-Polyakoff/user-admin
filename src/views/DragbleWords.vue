@@ -1,10 +1,3 @@
-<template>
-  <div class="dragble-words">
-    <h1>DragbleWords</h1>
-    <input @keypress.enter="sendText" type="text" v-model="text">
-  </div>
-</template>
-
 <script>
 export default {
   name: 'DragbleWords',
@@ -25,9 +18,18 @@ export default {
 }
 </script>
 
+<template>
+  <div class="dragble-words">
+    <h1>DragbleWords</h1>
+    <input
+      @keypress.enter="sendText"
+      type="text"
+      v-model="text"
+    >
+  </div>
+</template>
+
 <style scoped>
-  .dragble-words {
-  }
   input {
     width: 300px;
     height: 100px;

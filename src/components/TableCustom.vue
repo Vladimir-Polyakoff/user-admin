@@ -1,3 +1,16 @@
+<script>
+export default {
+  name: 'TheTable',
+
+  props: {
+    data: {
+      type: Array,
+      required: true
+    }
+  }
+}
+</script>
+
 <template>
     <table>
       <tr>
@@ -18,20 +31,7 @@
     </table>
 </template>
 
-<script>
-export default {
-  name: 'TheTable',
-
-  props: {
-    data: {
-      type: Array,
-      required: true
-    }
-  }
-}
-</script>
-
-<style scoped lang="scss">
+<style scoped>
   table, tr {
     width: 100%;
   }
@@ -41,8 +41,8 @@ export default {
     height: 40px;
     border-bottom: 1px solid #262626;
     padding-left: 8px;
-    &:not(:last-child){
-      border-right: 1px solid rgba(0,0,0,05);
-    }
+  }
+  td:not(:last-child), th:not(:last-child) {
+    border-right: 1px solid rgba(0,0,0,05);
   }
 </style>

@@ -1,3 +1,9 @@
+<script>
+export default {
+  name: 'ConfirmDialog'
+}
+</script>
+
 <template>
   <div class="container-form">
     <form class="form">
@@ -5,22 +11,12 @@
         <h1>Confirm Dialog Form</h1>
       </div>
       <div class="btn">
-        <button style="background:red;"
-          @click="emit('cansel')">Отмемнить
-        </button>
-        <button style="background:green;"
-          @click="emit('confirm')">Подтвердить
-        </button>
+        <button style="background:red;" @click="emit('cansel')">Отмемнить</button>
+        <button style="background:green;" @click="emit('confirm')">Подтвердить</button>
       </div>
     </form>
   </div>
 </template>
-
-<script>
-export default {
-  name: 'ConfirmDialog'
-}
-</script>
 
 <style scoped lang="scss">
   .container-form {

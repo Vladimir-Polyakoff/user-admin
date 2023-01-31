@@ -1,42 +1,3 @@
-<template>
-  <v-app>
-    <div class="header">
-      <InputCount
-        ref="InputCount"
-        type="number"
-        @setUserCount="count => getUsersList(count)"
-      />
-      <Dropdawn
-        ref="Dropdawn"
-        :list="dropdawnList"
-        @filterUserList="selected => selectedFilter = selected"
-      />
-    </div>
-
-    <Table @edit="(user) => $refs.DialogForm.openEditForm(user)"
-      @delete="checkUser" :data="filteredUserList" style="margin-block:40px"></Table>
-    <div class="d-flex justify-space-between">
-      <ChangeAll
-        ref="ChangeAll"
-        :list="changeAllList"
-        @changeValueByKey="changeValueByKey"
-      />
-      <button
-        @click="resetFilters"
-        style="color: green">Сбросить фильтры
-      </button>
-    </div>
-
-    <DialogForm ref="DialogForm"
-      @saveUser="addUser"
-      @editUser="updateUser"/>
-
-    <DialogDelete ref="DialogDelete" @delete="deleteUser"/>
-
-    <router-view/>
-  </v-app>
-</template>
-
 <script>
 import DialogForm from '@/components/DialogForm'
 import Table from '@/components/TableCustom'
@@ -147,6 +108,48 @@ export default {
   }
 }
 </script>
+
+<template>
+  <v-app>
+    <div class="header">
+      <InputCount
+        ref="InputCount"
+        type="number"
+        @setUserCount="count => getUsersList(count)"
+      />
+      <Dropdawn
+        ref="Dropdawn"
+        :list="dropdawnList"
+        @filterUserList="selected => selectedFilter = selected"
+      />
+    </div>
+
+    <Table
+      @edit="(user) => $refs.DialogForm.openEditForm(user)"
+      @delete="checkUser"
+      :data="filteredUserList"
+      style="margin-block:40px"
+    ></Table>
+    <div class="d-flex justify-space-between">
+      <ChangeAll
+        ref="ChangeAll"
+        :list="changeAllList"
+        @changeValueByKey="changeValueByKey"
+      />
+      <button @click="resetFilters" style="color: green">Сбросить фильтры</button>
+    </div>
+
+    <DialogForm
+      ref="DialogForm"
+      @saveUser="addUser"
+      @editUser="updateUser"
+    />
+
+    <DialogDelete ref="DialogDelete" @delete="deleteUser"/>
+
+    <router-view/>
+  </v-app>
+</template>
 
 <style scoped>
   .header {

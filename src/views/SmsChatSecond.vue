@@ -1,14 +1,3 @@
-<template>
-  <div class="parent">
-    <div class="chat">
-      <div v-for="(sms, index) in chatList" :key="index" :style="sms.name === 'second' && 'text-align: right'">{{ sms.name }} : {{ sms.value }}</div>
-    </div>
-    <InputChat
-    @send="send"
-    />
-  </div>
-</template>
-
 <script>
 import InputChat from '@/components/InputChat.vue'
 import { mapActions } from 'vuex'
@@ -33,6 +22,20 @@ export default {
   }
 }
 </script>
+
+<template>
+  <div class="parent">
+    <div class="chat">
+      <div
+        v-for="(sms, index) in chatList"
+        :key="index"
+        :style="sms.name === 'second' && 'text-align: right'"
+      >{{ sms.name }} : {{ sms.value }}
+      </div>
+    </div>
+    <InputChat @send="send"/>
+  </div>
+</template>
 
 <style scoped>
   .parent {

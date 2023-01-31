@@ -1,9 +1,3 @@
-<template>
-  <div>
-    <h1>{{ word }}</h1>
-  </div>
-</template>
-
 <script>
 export default {
   name: 'TheText',
@@ -23,3 +17,9 @@ export default {
   }
 }
 </script>
+
+<template>
+  <div>
+    <h1>{{ word }}</h1>
+  </div>
+</template>
