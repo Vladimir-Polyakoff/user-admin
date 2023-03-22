@@ -46,6 +46,13 @@ export default {
         name: 'FindSumIndex',
         title: 'RaFindSumIndexdio',
         icon: 'mdi-account'
+      },
+      {
+        id: 7,
+        path: '/valid-toggle',
+        name: 'ValidToogle',
+        title: 'ValidTogglePage',
+        icon: 'mdi-account'
       }
     ]
   }),

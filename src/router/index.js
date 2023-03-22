@@ -52,6 +52,11 @@ const routes = [
     path: '/sms-chat-second',
     name: 'SmsChatSecond',
     component: SmsChatSecond
+  },
+  {
+    path: '/valid-toggle',
+    name: 'ValidToogle',
+    component: () => import('@/views/ValidTogglePage')
   }
 ]
 
